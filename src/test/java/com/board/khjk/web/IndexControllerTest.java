@@ -22,6 +22,24 @@ public class IndexControllerTest {
         String body = this.restTemplate.getForObject("/",String.class);
 
         //then
-        assertThat(body).contains("머스타치 view");
+        assertThat(body).contains("Simple Board");
     }
+
+    @Test
+    public void 세이브페이지_로딩(){
+        //when
+        String body = this.restTemplate.getForObject("/posts/save", String.class);
+        //then
+        assertThat(body).contains("등록");
+    }
+
+    @Test
+    public void 업데이트페이지_로딩(){
+        //when
+        String body = this.restTemplate.getForObject("/posts/update/1", String.class);
+        //then
+        assertThat(body).contains("수정");
+    }
+
+
 }
