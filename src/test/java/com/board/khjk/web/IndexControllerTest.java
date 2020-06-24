@@ -33,13 +33,5 @@ public class IndexControllerTest {
         assertThat(body).contains("등록");
     }
 
-    @Test
-    public void 업데이트페이지_로딩(){
-        //when
-        String body = this.restTemplate.getForObject("/posts/update/1", String.class);
-        //then
-        assertThat(body).contains("수정");
-    }
-
 
 }
