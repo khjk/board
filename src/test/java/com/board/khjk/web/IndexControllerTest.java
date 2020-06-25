@@ -25,13 +25,4 @@ public class IndexControllerTest {
         assertThat(body).contains("Simple Board");
     }
 
-    @Test
-    public void 세이브페이지_로딩(){
-        //when
-        String body = this.restTemplate.getForObject("/posts/save", String.class);
-        //then
-        assertThat(body).contains("등록");
-    }
-
-
 }
